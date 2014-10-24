@@ -1,5 +1,5 @@
 <?php
-$log = simplexml_load_file("XMLFile.xml");
+$log = simplexml_load_file("logsFile.xml");
 
 /*echo $lists->list->entry[0]->name, "<br/>\n";
 echo $lists->list->entry[0]->commit->author, "<br/>\n";

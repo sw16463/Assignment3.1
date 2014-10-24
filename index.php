@@ -1,5 +1,14 @@
+<!--------------------------------------------------
+-   This file is a the index page for the website 
+-   This is a portfolio of all the assignment that I 
+-   done thus for. With revision data, date data, 
+-   etc. 
+--------------------------------------------------->
+
+
 <?php
-    include 'testingFile.php';
+    $log = simplexml_load_file("logFile.xml");
+    $lists = simplexml_load_file("listFile.xml")
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +21,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>1 Col Portfolio - Start Bootstrap Template</title>
+    <title>CS242 Portfolio</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -80,14 +89,18 @@
             </div>
             <div class="col-md-5">
                 <h3>Assignment1.0</h3>
-                <h4>Date: <?php 
-                    foreach($lists->list->entry as $entry){
-                        if((string)$entry->name == 'Assignment1.0'){
-                            echo $entry->commit->date;
+                <h4>Date:
+                    <!--This Function grabs the date of each assignment-->
+                    <?php 
+                        foreach($lists->list->entry as $entry){
+                            if((string)$entry->name == 'Assignment1.0'){
+                                echo $entry->commit->date;
+                            }
                         }
-                    }
-                ?></h4>
+                    ?>
+                </h4>
                 <h5>
+                    <!--This Function grabs the version of each assignment-->
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment1.0'){
@@ -113,7 +126,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="myModalLabel">Assignment1.0</h4>
               </div>
               <div class="modal-body">
                  <table class="table">
@@ -126,6 +139,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -191,15 +210,18 @@
             </div>
             <div class="col-md-5">
                 <h3>Assignment1.2.0</h3>
-                <h4>Date: <?php 
-                    foreach($lists->list->entry as $entry){
-                        if((string)$entry->name == 'Assignment1.2.0'){
-                            echo $entry->commit->date;
+                <h4>Date:
+                    <!--This Function grabs the date of each assignment--> 
+                    <?php 
+                        foreach($lists->list->entry as $entry){
+                            if((string)$entry->name == 'Assignment1.2.0'){
+                                echo $entry->commit->date;
+                            }
                         }
-                    }
-                ?>
+                    ?>
                 </h4>
                 <h5>
+                    <!--This Function grabs the date of each Version-->
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment1.2.0'){
@@ -235,6 +257,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -293,6 +320,7 @@
             </div>
             <div class="col-md-5">
                 <h3>Assignment2.0</h3>
+                <!--This Function grabs the date of each assignment-->
                 <h4>Date: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment2.0'){
@@ -302,6 +330,7 @@
                 ?>
                 </h4>
                 <h5>
+                    <!--This Function grabs the date of each Version-->
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment2.0'){
@@ -336,6 +365,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -395,6 +429,7 @@
             </div>
             <div class="col-md-5">
                 <h3>Assignment2.1</h3>
+                <!--This Function grabs the date of each assignment-->
                 <h4>Date: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment2.1'){
@@ -404,6 +439,7 @@
                 ?>
                 </h4>
                 <h5>
+                    <!--This Function grabs the Version of each assignment-->
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment2.1'){
@@ -443,6 +479,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -501,6 +542,7 @@
             </div>
             <div class="col-md-5">
                 <h3>Assignment2.2</h3>
+                <!--This Function grabs the date of each assignment-->
                 <h4>Date: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment2.2'){
@@ -509,6 +551,7 @@
                     }
                 ?></h4>
                 <h5>
+                    <!--This Function grabs the Version of each assignment-->
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'Assignment2.2'){
@@ -542,6 +585,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -595,11 +643,12 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    <img class="img-responsive" src="HW0.png" alt="" style="height: 300px;">
                 </a>
             </div>
             <div class="col-md-5">
                 <h3>HW0</h3>
+                <!--This Function grabs the date of each assignment-->
                 <h4>Date: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'HW0'){
@@ -608,6 +657,7 @@
                     }
                 ?>
                 </h4>
+                <!--This Function grabs the Version of each assignment-->
                 <h5>
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
@@ -645,6 +695,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -694,15 +749,16 @@
         </div>
         <hr>
 
-        <!-- Project Five -->
+        <!-- Project Six -->
         <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    <img class="img-responsive" src="assignGiveCode.png" alt="">
                 </a>
             </div>
             <div class="col-md-5">
                 <h3>avl</h3>
+                <!--This Function grabs the date of each assignment-->
                 <h4>Date: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'avl'){
@@ -711,6 +767,7 @@
                     }
                 ?> 
                 </h4>
+                <!--This Function grabs the version of each assignment-->
                 <h5>
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
@@ -745,6 +802,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
@@ -794,15 +856,16 @@
         </div>
         <hr>
 
-        <!-- Project Five -->
+        <!-- Project Seven -->
         <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    <img class="img-responsive" src="shopping.jpg" alt="">
                 </a>
             </div>
             <div class="col-md-5">
                 <h3>shopping</h3>
+                <!--This Function grabs the date of each assignment-->
                 <h4>Date: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'shopping'){
@@ -812,6 +875,7 @@
                 ?> 
                 </h4>
                 <h5>
+                    <!--This Function grabs the Version of each assignment-->
                     Version: <?php 
                     foreach($lists->list->entry as $entry){
                         if((string)$entry->name == 'shopping'){
@@ -846,6 +910,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!---------------------------------------------------
+                        -   This Function is the inside the modal displays 
+                        -   Each file of the project and all of it corresponding 
+                        -   info. 
+                        ---------------------------------------------------->
                         <?php 
                             foreach($lists->list->entry as $entry){
                                 if((string)$entry['kind'] == 'file'){
