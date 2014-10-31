@@ -42,5 +42,7 @@ SimpleXMLElement Object
                             [author] => scwilli2 
                             [date] => 2014-09-18T04:00:33.197361Z 
                          ) 
-                 ) 
+                    )
+            )
+    )
             

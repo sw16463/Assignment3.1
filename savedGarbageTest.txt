@@ -1,0 +1,92 @@
+
+            /*if (!$link = mysql_connect('127.0.0.1:3306', 'root', 'Goodgirl21!')) {
+                echo 'Could not connect to mysql';
+                exit;
+            }
+
+            if (!mysql_select_db('sakila', $link)) {
+                echo 'Could not select database';
+                exit;
+            }
+
+            setcookie @last_update = '2006-02-14';
+            $sql    = 'SELECT actor_id, first_name FROM actor WHERE last_update = @last_update';
+            $result = mysql_query($sql, $link);
+
+            if (!$result) {
+                echo "DB Error, could not query the database\n";
+                echo 'MySQL Error: ' . mysql_error();
+                exit;
+            }
+
+            /*$sql = "SELECT COUNT(*) AS _num FROM test; ";
+            $sql.= "INSERT INTO test(id) VALUES (1); ";
+            $sql.= "SELECT COUNT(*) AS _num FROM test; ";
+            
+            if (!$mysqli->multi_query($sql)) {
+                echo "Multi query failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            }
+
+            do {
+                if ($res = $mysqli->store_result()) {
+                    var_dump($res->fetch_all(MYSQLI_ASSOC));
+                    $res->free();
+                }
+            } while ($mysqli->more_results() && $mysqli->next_result());
+            /*while ($row = mysql_fetch_assoc($result)) {
+                echo $row['actor_id'];
+                echo $row['first_name']
+            }
+
+            mysql_free_result($result);
+            */
+
+     <?php/*
+            // we connect to localhost at port 3307
+            $link = mysql_connect('127.0.0.1:3306', 'root', 'Goodgirl21!');
+            if (!$link) {
+                die('Could not connect: ' . mysql_error());
+            }
+            echo 'Connected successfully';
+            SET @last_update = '2006-02-14';
+            $query = "SELECT actor_id, first_name, last_name, last_update 
+                           FROM   actor 
+                           WHERE  last_update > @last_update";
+            echo $query;
+            mysql_close($link);*/
+        ?>
+        <?php
+            /*
+            $host     = "127.0.0.1";
+            $port     = 3306;
+            $socket   = "";
+            $user     = "root";
+            $password = "Goodgirl21!";
+            $dbname   = "sakila";
+
+            $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+                or die ('Could not connect to the database server' . mysqli_connect_error());
+
+            //$con->close();
+            SET @last_update = '2006-02-14';
+            $query = "SELECT actor_id, first_name, last_name, last_update 
+                          FROM   actor 
+                          WHERE  last_update > @last_update";
+            $last_update = '';
+            
+            $stmt->bind_param('s', $last_update);
+            
+            if ($stmt = $con->prepare($query)) {
+
+                $stmt->execute();
+                $stmt->bind_result($actor_id, $first_name, $last_name, $last_update);
+                
+                while ($stmt->fetch()) {
+                     printf("%s, %s, %s, %s\n", 
+                       $actor_id, $first_name, $last_name, $last_update);
+                }
+
+                $stmt->close();
+            }
+            */
+            ?>
