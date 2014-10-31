@@ -39,10 +39,22 @@
                         echo 'MySQL Error: ' . mysql_error();
                         exit;
                     }
-
+                    $count = 0;
                     while ($row = mysql_fetch_assoc($result)) {
                         echo "<div class='row'><div class='well'>";
-                        echo $row['userscom'];
+                        $rows = $row['userscom'];
+                        $strSQL = "INSERT INTO users(";
+
+	                    $strSQL = $strSQL . "idusers, ";
+	                    $strSQL = $strSQL . "userscom) ";
+
+	                    $strSQL = $strSQL . "VALUES(";
+
+	                    $strSQL = $strSQL . "'$count', ";
+                        $strSQL = $strSQL . "'$rows' )";
+
+                        /*This filters out users comments*/
+                        
                         echo "<hr>";
                         echo "<h4>Add your Comments Here</h4>";
                         if( $_GET["name"] || $_GET["age"] )
