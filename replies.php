@@ -11,9 +11,10 @@
 
 	// Select database
 	mysql_select_db("practicecs242") or die(mysql_error());
-
+    
 	// The SQL statement is built
-    $id = 10;
+    $id = 11;
+    $comment = "please work";
 	$strSQL = "INSERT INTO users(";
 
 	$strSQL = $strSQL . "idusers, ";
@@ -21,8 +22,8 @@
 
 	$strSQL = $strSQL . "VALUES(";
 
-	$strSQL = $strSQL . "'10', ";
-    $strSQL = $strSQL . "'This is the comment' )";
+	$strSQL = $strSQL . "'$id', ";
+    $strSQL = $strSQL . "'$comment' )";*/
 
 	// The SQL statement is executed 
 	mysql_query($strSQL) or die (mysql_error());
